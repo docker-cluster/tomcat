@@ -1,0 +1,17 @@
+version: "3"
+services:
+  ego-portal: 
+    image: tomcat:8.5-jre8
+    container_name: ego-portal
+    working_dir: /redis
+    restart: always
+    volumes: 
+      - ./webapps:/usr/local/tomcat/webapps:rw
+      - ./conf/server.xml:/usr/local/tomcat/conf/server.xml
+      - ./conf/catalina.policy:/usr/local/tomcat/conf/catalina.policy
+      - ./conf/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+    environment: TZ=Asia/Shanghai
+    ports: 30080:8080
+    entrypoint: 
+      - "catalina.sh"
+      - "run"
