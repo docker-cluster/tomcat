@@ -10,7 +10,8 @@ services:
       - ./conf/server.xml:/usr/local/tomcat/conf/server.xml
       - ./conf/catalina.policy:/usr/local/tomcat/conf/catalina.policy
       - ./conf/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
-    environment: TZ=Asia/Shanghai
+    environment:
+      - TZ=Asia/Shanghai
     ports:
       - 30080:8080
     entrypoint: 
