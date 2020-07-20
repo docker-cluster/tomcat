@@ -7,7 +7,15 @@
 目录结构：
 
 ``` bash
-
+tomcat
+├── conf
+│   ├── catalina.policy
+│   ├── server.xml
+│   └── tomcat-users.xml
+├── docker-compose.yml
+├── README.md
+├── setup.sh
+└── webapps.tar.gz
 ```
 
 ## 部署
