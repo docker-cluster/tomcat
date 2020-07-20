@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "***************************start to unzip webapp***************************"
-ls | grep -w 'webapps'
+ls | grep '^webapps$'
 if [ $? -ne 0 ]
 then
   tar -zxf webapps.tar.gz
