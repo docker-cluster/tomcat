@@ -16,7 +16,7 @@ then
   #allow all ip
   sed -i 's/allow="127\\.\\d+\\.\\d+\\.\\d+|::1|0:0:0:0:0:0:0:1"/allow=".*"/' ./webapps/manager/META-INF/context.xml
 fi
-mv webapps ego-portal1
+mv webapps ego-portal2
 echo "***************************webapp unzipped***************************"
 
 echo "***************************start to init tomcat***************************"
