@@ -5,7 +5,7 @@ services:
     container_name: ego-portal1
     restart: always
     volumes: 
-      - ./ego-portal1:/usr/local/tomcat/webapps:rw
+      - ./webapps:/usr/local/tomcat/webapps:rw
       - ./conf/server.xml:/usr/local/tomcat/conf/server.xml
       - ./conf/catalina.policy:/usr/local/tomcat/conf/catalina.policy
       - ./conf/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
@@ -21,7 +21,7 @@ services:
     container_name: ego-portal2
     restart: always
     volumes: 
-      - ./ego-portal2:/usr/local/tomcat/webapps:rw
+      - ./webapps:/usr/local/tomcat/webapps:rw
       - ./conf/server.xml:/usr/local/tomcat/conf/server.xml
       - ./conf/catalina.policy:/usr/local/tomcat/conf/catalina.policy
       - ./conf/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
